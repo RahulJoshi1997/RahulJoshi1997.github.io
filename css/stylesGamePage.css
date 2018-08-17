@@ -23,6 +23,7 @@ img, video {
 #gameSection p {
     padding: 5px;
     margin: 0;
+    font-size: 1em;
 }
 
 h3 a {
