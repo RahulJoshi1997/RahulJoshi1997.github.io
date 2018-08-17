@@ -80,10 +80,11 @@ header {
     margin: 0px;
     position: relative;
     right: 4px;
-    padding: 0px;
+    padding: 4px 0 15px 0;
     
     color: #3e3e73;
     font-size: 4em;
+    line-height: 90%;
 }
 
 #title h2 {
@@ -104,7 +105,7 @@ header {
 
 #gameSection {
     clear: both;
-    padding-top: 230px;
+    padding-top: 325px;
 }
 
 #gameSection img {
@@ -126,6 +127,23 @@ div.game p {
     width: 100%;
 }
 
+@media only screen and (min-width: 390px) {
+    #gameSection {
+        padding-top: 295px;
+    }
+}
+
+@media only screen and (min-width: 412px) {
+    #title h1 {
+        line-height: 100%;
+        padding: 0;
+    }
+    
+    #gameSection {
+        padding-top: 230px;
+    }
+}
+
 @media only screen and (min-width: 500px) {
     .col-a-1 {width: 8.33%;}
     .col-a-2 {width: 16.66%;}
@@ -140,20 +158,8 @@ div.game p {
     .col-a-11 {width: 91.66%;}
     .col-a-12 {width: 100%;}
     
-    #title {
-        float: left;
-        clear: both;
-    }
-    
-    #contactMe {
-        float: left;
-        clear: both;
-        text-align: left;
-        padding: 30px 0 10px 10px;
-    }
-    
     #gameSection {
-        padding-top: 230px;
+        padding-top: 235px;
     }
 }
 
@@ -185,7 +191,7 @@ div.game p {
     }
     
     #gameSection {
-        padding-top: 135px;
+        padding-top: 140px;
     }
 }
 
@@ -203,20 +209,4 @@ div.game p {
     .col-c-10 {width: 83.33%;}
     .col-c-11 {width: 91.66%;}
     .col-c-12 {width: 100%;}
-    
-    #title {
-        float: left;
-        clear: none;
-    }
-    
-    #contactMe {
-        float: right;
-        clear: none;
-        text-align: right;
-        padding: 25px 10px;
-    }
-    
-    #gameSection {
-        padding-top: 135px;
-    }
 }
