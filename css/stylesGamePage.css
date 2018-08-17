@@ -1,0 +1,96 @@
+/*
+Color Scheme:
+#ACACCC
+#535399 | lighter shades: #8787b8, #eeeef5, #f5f5fa | darker shades: #252545
+#F0F8FF aliceblue
+#FFD6B0
+#CCB6AC
+*/
+/*
+Color Scheme Link:
+https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=4&name=My%20Color%20Theme&mode=hsv&rgbvalues=0.6729411764705882,0.6738328173374772,0.8,0.32470588235294123,0.3266377708978674,0.6,0.9411764705882353,0.9725490196078431,1,1,0.8400980392156678,0.6911764705882353,0.8,0.7156823529411785,0.6729411764705882&swatchOrder=0,1,2,3,4
+
+http://www.color-hex.com/color/f0f8ff
+http://www.color-hex.com/color-palette/4142
+*/
+
+img, video {
+    outline: 5px solid #eeeef5;
+    max-width: 100%;
+    height: auto;
+}
+
+#gameSection p {
+    padding: 5px;
+    margin: 0;
+}
+
+h3 a {
+    display: inline-block;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+h3 {
+    padding: 5px;
+    margin: 0;
+    color: #535399;
+    font-size: 1.5em;
+}
+
+#gameSection ul {
+    display:block;
+    list-style-type: circle;
+    padding: 5px 0 0 0;
+    margin: 0 0 0 25px;
+}
+
+#gameSection li {
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+#cover {
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    float: none;
+    clear: both;
+}
+
+.extras {
+    margin: 0px;
+    padding: 10px;
+    max-width: 100%;
+    float: left;
+}
+
+@media only screen and (min-width: 500px) {
+    #cover {
+        margin: auto;
+        padding: 10px;
+        float: none;
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    /* ContactMe Switch to right align: */
+    #cover {
+        margin: 0;
+        padding: 10px 10px 10px 25px;
+        float: right;
+        clear: none;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    /* For desktop: */
+    #cover {
+        margin: 0;
+        padding: 10px 10px 10px 25px;
+        float: right;
+        clear: none;
+    }
+}

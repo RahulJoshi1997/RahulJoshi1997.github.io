@@ -1,0 +1,46 @@
+/*
+Color Scheme:
+#ACACCC
+#535399 | lighter shades: #8787b8, #eeeef5, #f5f5fa | darker shades: #252545
+#F0F8FF aliceblue
+#FFD6B0
+#CCB6AC
+*/
+/*
+Color Scheme Link:
+https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=4&name=My%20Color%20Theme&mode=hsv&rgbvalues=0.6729411764705882,0.6738328173374772,0.8,0.32470588235294123,0.3266377708978674,0.6,0.9411764705882353,0.9725490196078431,1,1,0.8400980392156678,0.6911764705882353,0.8,0.7156823529411785,0.6729411764705882&swatchOrder=0,1,2,3,4
+
+http://www.color-hex.com/color/f0f8ff
+http://www.color-hex.com/color-palette/4142
+*/
+
+#slideShow {
+    display: none;
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+    z-index: 1;
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+    background-color: rgba(238, 238, 245, 0.9);
+}
+
+img.slide {
+    display: none;
+    outline-style: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px 100px;
+    max-width:100%;
+}

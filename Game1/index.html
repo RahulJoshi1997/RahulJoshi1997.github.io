@@ -2,7 +2,9 @@
 <html lang="en-US">
 <head>
 	<title>Rahul Joshi</title>
-    <link href="../stylesGamePage.css" rel="stylesheet" type="text/css">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/stylesGamePage.css" rel="stylesheet" type="text/css">
+    <link href="../css/slideShow.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -10,10 +12,10 @@
     <div>
     <header class="clearfix">
         <!-- Title -->
-        <div id="title">
+        <a href="../index.html"><div id="title">
             <h1>Rahul Joshi</h1>
-            <h2>I write, and I make games</h2>
-        </div>
+            <h2>I design and program games</h2>
+        </div></a>
         <!-- Contact Me -->
         <p id="contactMe">
             rj1093@nyu.edu<br />
@@ -25,7 +27,10 @@
     
     <!-- My Games/Work -->
     <section id="gameSection" class="clearfix">
-        <div id="cover"><img src="Cover.png" alt="game cover"></div>
+        <div id="cover">
+            <video controls><source src="Intro.mp4" type="video/mp4"></video>
+            <h3><a href="https://solimporta.itch.io/axolotl">Play the game on Itch</a></h3>
+        </div>
         <h3>Description:</h3>
         <p>
             This is a group project where we adapted "Axolotl" by Julio Cortázar: a story where the narrator is facinated by an axolotol until the day they become one. This game is about creating the atmosphere of fascination and introspection that leads to a sense of connection with the animal.
@@ -36,31 +41,42 @@
         </p>
         <h3>My Role:</h3>
         <ul>
-            <li>I coded the transitions seen when the game ends and when the player zooms into the aquarium tank.</li>
-            <li>I also coded how the mouse controls the parallax effect.</li>
-            <li>I made all the levels (the different days in the game) and arranged them.</li>
-            <li>I decided on the artstyle that's used in the game.</li>
-            <li>I made all the art assets used in the aquarium background, along with the face of Cortázar.</li>
-            <li>I wrote the story with a groupmate and helped come up with the pool of words that the player could choose from each day. This writing was a major part of the design of the game.</li>
-            <li>With all my teammates, I helped tackle how to adapt the story into game and nail down what the gameplay loop should be.</li>
+            <li>I programmed transition effects and visual feedback systems in Unity C#.</li>
+            <li>I came up with an artstyle that would suit the game, and drew a lot of the art assets.</li>
+            <li>I iterated on the narrative design with a groupmate, ensuring that the game had an overall arc and that the players could meaningfully choose what they felt each day. </li>
+            <li>As part of the narrative design, I made all the levels (the different days in the game) and arranged them.</li>
+            <li>I designed the game mechanics with my teammates to effectively adapt the story and to give players agency in their ability to observe and narrate.</li>
         </ul>
     </section>
     
     <!-- Other Images -->
     <section style="clear: both; padding-top: 20px;" class="clearfix">
-        <h2 style="padding: 0 0 0 10px">Videos and Screenshots</h2>
-        <div class="extras col-a-12 col-b-6 col-c-4">
-            <img src="Cover.png" alt="game cover">
+        <h3 style="padding: 0 0 0 10px">Screenshots:</h3>
+        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(1);">
+            <img src="ScreenShot1.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4">
-            <img src="Cover.png" alt="game cover">
+        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(2);">
+            <img src="ScreenShot2.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4">
-            <img src="Cover.png" alt="game cover">
+        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(3);">
+            <img src="ScreenShot3.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4">
-            <img src="Cover.png" alt="game cover">
+        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(4);">
+            <img src="ScreenShot4.png" alt="Screen Shot">
         </div>
+        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(5);">
+            <img src="ScreenShot5.png" alt="Screen Shot">
+        </div>
+    </section>
+    
+    <!-- Slide Show -->
+    <script src="../scripts/slideShow.js"></script>
+    <section id="slideShow">
+        <img src="ScreenShot1.png" class="slide">
+        <img src="ScreenShot2.png" class="slide">
+        <img src="ScreenShot3.png" class="slide">
+        <img src="ScreenShot4.png" class="slide">
+        <img src="ScreenShot5.png" class="slide">
     </section>
 </body>
 </html>
