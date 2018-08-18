@@ -52,31 +52,39 @@
     <!-- Other Images -->
     <section style="clear: both; padding-top: 20px;" class="clearfix">
         <h3 style="padding: 0 0 0 10px">Screenshots:</h3>
-        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(1);">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game1/ScreenShot1.png');">
             <img src="ScreenShot1.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(2);">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game1/ScreenShot2.png');">
             <img src="ScreenShot2.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(3);">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game1/ScreenShot3.png');">
             <img src="ScreenShot3.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(4);">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game1/ScreenShot4.png');">
             <img src="ScreenShot4.png" alt="Screen Shot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4" onclick="openSlideShow();currentSlide(5);">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game1/ScreenShot5.png');">
             <img src="ScreenShot5.png" alt="Screen Shot">
         </div>
     </section>
     
     <!-- Slide Show -->
     <script src="../scripts/slideShow.js"></script>
-    <section id="slideShow">
+    <section id="slideShow" onclick="closeSlide();">
+        <div id="slide"></div>
+        <!--
         <img src="ScreenShot1.png" class="slide">
         <img src="ScreenShot2.png" class="slide">
         <img src="ScreenShot3.png" class="slide">
         <img src="ScreenShot4.png" class="slide">
         <img src="ScreenShot5.png" class="slide">
+        <div class="slide"><img src="ScreenShot1.png" style="width: 100%;"></div>
+        <div class="slide"><img src="ScreenShot2.png" style="width: 100%;"></div>
+        <div class="slide"><img src="ScreenShot3.png" style="width: 100%;"></div>
+        <div class="slide"><img src="ScreenShot4.png" style="width: 100%;"></div>
+        <div class="slide"><img src="ScreenShot5.png" style="width: 100%;"></div>
+        -->
     </section>
 </body>
 </html>
