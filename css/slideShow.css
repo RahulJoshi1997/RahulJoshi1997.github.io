@@ -3,6 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     
     z-index: 1;
     
@@ -16,14 +18,15 @@
 }
 
 #slide {
-    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
     
     background-image: url('../Game1/ScreenShot1.png');
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
-    
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
