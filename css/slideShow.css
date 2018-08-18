@@ -18,6 +18,8 @@
 }
 
 #slide {
+    position: absolute;
+    
     background-image: url('../Game1/ScreenShot1.png');
     -webkit-background-size: contain;
     -moz-background-size: contain;
