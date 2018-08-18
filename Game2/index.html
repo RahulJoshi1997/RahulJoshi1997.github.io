@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Rahul Joshi</title>
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/stylesGamePage.css" rel="stylesheet" type="text/css">
+    <link href="../css/slideShow.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+    <header class="clearfix">
+        <!-- Title -->
+        <a href="../index.html"><div id="title">
+            <h1>Rahul Joshi</h1>
+            <h2>I design and develop games</h2>
+        </div></a>
+        <!-- Contact Me -->
+        <p id="contactMe">
+            rj1093@nyu.edu<br />
+            <a href="../aboutMe/index.html">About Me</a><br />
+            <a href="../aboutMe/resume.pdf">Resume</a>
+        </p>
+    </header>
+    </div>
+    
+    <!-- My Games/Work -->
+    <section id="gameSection" class="clearfix">
+        <div id="cover">
+            <video controls><source src="Intro.mp4" type="video/mp4"></video>
+            <h3><a href="https://rahuljoshi.itch.io/a-terrain-generator">Play the game on Itch</a></h3>
+        </div>
+        <h3>Description:</h3>
+        <p>
+            This is a solo project where I used simplex noise to generate terrain. The generator can create four types of land features: mountains, planes, hills, and canyons.
+        </p>
+        <p>
+            This was made using C# in Unity.
+        </p>
+        <h3>Some (Semi-)Technical Details:</h3>
+        <ul>
+            <li>To avoid lag, I split the terrain into smaller chunks and generated these chunks in separate frames.</li>
+            <li>I used object pooling for the terrain chunks to minimize heap allocations.</li>
+            <li>I shared objects (arrays Unity needs to assign meshes new vertacies, normals, etc.) between all the terrain chunks to minimize the amount of RAM used in general. </li>
+            <li>I also made a simple state machine for fun, which is used by the flowers.</li>
+        </ul>
+    </section>
+    
+    <!-- Other Images -->
+    <section style="clear: both; padding-top: 20px;" class="clearfix">
+        <h3 style="padding: 0 0 0 5px;">Screenshots:</h3>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot1.png');">
+            <img src="ScreenShot1.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot2.png');">
+            <img src="ScreenShot2.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot3.png');">
+            <img src="ScreenShot3.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot4.png');">
+            <img src="ScreenShot4.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot5.png');">
+            <img src="ScreenShot5.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot6.png');">
+            <img src="ScreenShot6.png" alt="Screenshot">
+        </div>
+    </section>
+    
+    <!-- Slide Show -->
+    <script src="../scripts/slideShow.js"></script>
+    <section id="slideShow" onclick="closeSlide();">
+        <div id="slide"></div>
+    </section>
+</body>
+</html>
