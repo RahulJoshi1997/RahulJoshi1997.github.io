@@ -24,20 +24,7 @@
     top: 5%;
     width: 90%;
     height: 90%;
-    
-    /*
-    display: table-cell;
-    vertical-align: middle;
-    
-    background-image: url('../Game1/ScreenShot1.png');
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    */
-    
+
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.1s;
     -moz-animation-name: zoom;
@@ -124,50 +111,3 @@
     from {transform:scale(0)} 
     to {transform:scale(1)}
 }
-
-/*
-#closeButton {
-    z-index: 3;
-    position: fixed;
-    right: 15px;
-    top: 0;
-    margin: 10px 0;
-    padding: 0 10px 0 10px;
-    background-color: #8787b8;
-    font-size: 3em;
-    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-    
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-}
-
-img.slide {
-    outline-style: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    padding: 5%;
-    
-    height: 100%;
-    width: auto;
-}
-
-.slide {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 8px;
-    width: 80%;
-}
-*/
