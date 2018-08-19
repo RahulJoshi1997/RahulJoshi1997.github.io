@@ -52,31 +52,41 @@
     
     <!-- Other Images -->
     <section style="clear: both; padding-top: 20px;" class="clearfix">
-        <h3 style="padding: 0 0 0 5px;">Screenshots:</h3>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot1.png');">
+        <h3 style="padding: 0 0 0 5px">Screenshots:</h3>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
             <img src="ScreenShot1.png" alt="Screenshot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot2.png');">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
             <img src="ScreenShot2.png" alt="Screenshot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot3.png');">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
             <img src="ScreenShot3.png" alt="Screenshot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot4.png');">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(4);">
             <img src="ScreenShot4.png" alt="Screenshot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot5.png');">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(5);">
             <img src="ScreenShot5.png" alt="Screenshot">
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlide('Game2/ScreenShot6.png');">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(5);">
             <img src="ScreenShot6.png" alt="Screenshot">
         </div>
     </section>
     
     <!-- Slide Show -->
-    <script src="../scripts/slideShow.js"></script>
-    <section id="slideShow" onclick="closeSlide();">
-        <div id="slide"></div>
+    <section id="slideShow">
+        <div id="slideContainer">
+            <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
+            <img src="ScreenShot1.png" class="slide">
+            <img src="ScreenShot2.png" class="slide">
+            <img src="ScreenShot3.png" class="slide">
+            <img src="ScreenShot4.png" class="slide">
+            <img src="ScreenShot5.png" class="slide">
+            <img src="ScreenShot6.png" class="slide">
+            <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
+            <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
+        </div>
     </section>
+    <script src="../scripts/slideShow.js"></script>
 </body>
 </html>
