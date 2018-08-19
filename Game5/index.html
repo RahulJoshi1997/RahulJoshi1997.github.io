@@ -36,27 +36,22 @@
         </div>
         <h3>Description:</h3>
         <p>
-            A game about managing food placement while keeping in mind several different needs. It's a hectic split-attention game like Diner Dash.
+            A hectic, split attention game, like Diner Dash and Overcooked.
         </p>
         <p>
-            This was an individual project, first prototyped using Lua in Pico-8 then remade using C# in Unity.
+            This was an individual project made using C# in Unity.
         </p>
         <h3>Gameplay:</h3>
         <p>
-            The player is the papa who needs to feed their kids five things each. The kids love food though, and they'll keep eating more than what they need. So the player needs keep food away from overeating kids.
+            The player needs to feed their kids as well as themselves while watching out for bird poop.
+            The mechanics are about managing your attention between multiple aspects of the game while preforming a pretty simple task of moving and sorting plates of food.
         </p>
-        <p>
-            The player, as the papa, also wants to eat one of every dish at the picnic. So they need to make sure that no one dish is running too low before they get their share.
-        </p>
-        <p>
-            To complicate things, there are also birds trying to poop on the food, so the players may need to keep food in front of overeating kids to weather the storm.
-        </p>
-        <h3>Design Details:</h3>
+        <h3>Some (Semi-)Technical Details:</h3>
         <ul>
-            <li>For inspiration I was thinking about games like overcooked where you have a simple action with different factors that need your attention.</li>
-            <li>I designed each factor by thinking about how it will draw the player's attention at each moment. So I approached a factor by thinking how it can make the player lose all by itself.</li>
-            <li>I made these factors all act on the area of a picnic mat to ensure that there'd be an overlap of interests that players will have to negotiate. These decisions will slow players down while other factors tick down in different areas of the mat.</li>
-            <li>Working with Pico-8's limitations, I decided to incorporate keyboard controls into the design. This led to the food stacks where players can only access the dishes at the top of the stack, while kids eat away at the difficult-to-reach bottom.</li>
+            <li>To avoid lag, I split the terrain into smaller chunks and generated these chunks in separate frames.</li>
+            <li>I used object pooling for the terrain chunks to minimize heap allocations.</li>
+            <li>I shared objects (arrays Unity needs to assign meshes new vertacies, normals, etc.) between all the terrain chunks to minimize the amount of RAM used in general. </li>
+            <li>I also made a simple state machine for fun, which is used by the flowers.</li>
         </ul>
     </section>
     
