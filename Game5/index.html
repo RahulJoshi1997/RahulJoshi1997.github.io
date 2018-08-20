@@ -32,26 +32,23 @@
                 <source src="Intro.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <h3><a href="https://rahuljoshi.itch.io/picnic-papa">Play the game on Itch</a></h3>
+            <h3><a href="https://rahuljoshi.itch.io/racing-blind">Play the game on Itch</a></h3>
         </div>
         <h3>Description:</h3>
         <p>
-            A hectic, split attention game, like Diner Dash and Overcooked.
+            A racing game where players can't see the track and need to use sonar pulses instead.
         </p>
         <p>
-            This was an individual project made using C# in Unity.
+            This was an individual project, first prototyped using Lua in Pico-8 then remade using C# in Unity.
         </p>
         <h3>Gameplay:</h3>
         <p>
-            The player needs to feed their kids as well as themselves while watching out for bird poop.
-            The mechanics are about managing your attention between multiple aspects of the game while preforming a pretty simple task of moving and sorting plates of food.
+            Players race over the course of two laps. Staying on track makes them go faster, while using sonar pulses slows them down. Both players want to pulse as little as they can, while using the pulses of their opponent to see the track. However, racing without sight risks a very severe penalty for going off track.
         </p>
-        <h3>Some (Semi-)Technical Details:</h3>
+        <h3>Design and Development Details:</h3>
         <ul>
-            <li>To avoid lag, I split the terrain into smaller chunks and generated these chunks in separate frames.</li>
-            <li>I used object pooling for the terrain chunks to minimize heap allocations.</li>
-            <li>I shared objects (arrays Unity needs to assign meshes new vertacies, normals, etc.) between all the terrain chunks to minimize the amount of RAM used in general. </li>
-            <li>I also made a simple state machine for fun, which is used by the flowers.</li>
+            <li>I wrote shaders in HLSL for the sonar effects, using Unity's MaterialBlockProperties to make updating the shader values more efficient.</li>
+            <li>I needed to balance the penalty for pulsing so beginner players had a good experience, but they also felt encouraged to play at a higher level where they pulse less. To solve this, I made speed penaltys for pulsing act more like a speed lock. Players had their speed reduced by 20% and they couldn't accelerate for a while after. This speed lock was short if the player had a lower speed to begin with. This ensured that beginners never felt trapped at a lower speed, but also didn't stay too long at the higher speeds which would encourage them to pulse less.</li>
         </ul>
     </section>
     
