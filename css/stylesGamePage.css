@@ -45,12 +45,19 @@ h3 {
     display:block;
     list-style-type: circle;
     padding: 5px 0 0 0;
-    margin: 0 0 0 25px;
+    margin: 0 0 0 30px;
+}
+
+#gameSection article {
+    margin: 0 0 0 5px;
+    padding: 0 0 0 20px;
+    font-style: italic;
+    border-left: solid 8px #a9a9cc;
 }
 
 #gameSection li {
     margin: 0;
-    padding: 0 0 5px 0;
+    padding: 0 0 8px 0;
 }
 
 #cover {

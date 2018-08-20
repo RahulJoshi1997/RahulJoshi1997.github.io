@@ -36,7 +36,7 @@
         </div>
         <h3>Description:</h3>
         <p>
-            A game about managing food placement while keeping in mind several different needs. It's a hectic split-attention game like Diner Dash.
+            A game about a simple task of moving food around, while keeping in mind several different mechanics at once. It's a hectic split-attention game like Diner Dash.
         </p>
         <p>
             This was an individual project, first prototyped using Lua in Pico-8 then remade using C# in Unity.
@@ -53,10 +53,11 @@
         </p>
         <h3>Design Details:</h3>
         <ul>
-            <li>For inspiration I was thinking about games like overcooked where you have a simple action with different factors that need your attention.</li>
-            <li>I designed each factor by thinking about how it will draw the player's attention at each moment. So I approached a factor by thinking how it can make the player lose all by itself.</li>
-            <li>I made these factors all act on the area of a picnic mat to ensure that there'd be an overlap of interests that players will have to negotiate. These decisions will slow players down while other factors tick down in different areas of the mat.</li>
-            <li>Working with Pico-8's limitations, I decided to incorporate keyboard controls into the design. This led to the food stacks where players can only access the dishes at the top of the stack, while kids eat away at the difficult-to-reach bottom.</li>
+            <li>I wanted to create a dynamic where players want to focus on an immediate action, but have to keep zooming out to reassess the larger situation, leading to a hectic gameplay.</li>
+            <li>I made the feeding criteria for the kids and the papa different but interrelated to make sure players are always thinking about at least two things when moving each dish.</li>
+            <li>I also made each kid potentially trigger a losing condition by overeating, so players always feel an urgent need to scan the dishes and think about the two different feeding criteria.</li>
+            <li>I added the birds to force players to quickly change plans and potentially move dishes to suboptimal positions to avoid the poop. So players will want to think about their reaction to the poop, but they will be rushed by the need to scan all the dishes.</li>
+            <li>Working with Pico-8's limitations, I decided to incorporate keyboard controls into the design. This led to the food stacks where players can only access the dishes at the top of the stack, while kids eat away at the difficult-to-reach bottom. These limitations make it difficult to undo the rushed decisions of the past, pushing players to think more about each immediate action.</li>
         </ul>
     </section>
     

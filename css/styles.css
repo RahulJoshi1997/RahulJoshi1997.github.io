@@ -57,6 +57,7 @@ html, body {
 	margin: 10px;
     font-family: 'Karla', sans-serif;
     font-size: 100%;
+    word-spacing: 0.1rem;
 }
 
 header {
@@ -118,6 +119,8 @@ header {
 div.game {
     float: left;
     padding: 10px;
+    max-width: 630px;
+    max-height: 500px;
 }
 
 div.game p {
