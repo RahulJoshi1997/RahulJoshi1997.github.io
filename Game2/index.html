@@ -46,7 +46,7 @@
             <li>To avoid lag, I split the terrain into smaller chunks and generated these chunks in separate frames.</li>
             <li>I used object pooling for the terrain chunks to minimize heap allocations.</li>
             <li>I shared objects (arrays Unity needs to assign meshes new vertacies, normals, etc.) between all the terrain chunks to minimize the amount of RAM used in general. </li>
-            <li>I also made a simple state machine for fun, which is used by the flowers.</li>
+            <li>I also made a simple state machine for fun. It controls the behavior of the flowers.</li>
         </ul>
     </section>
     

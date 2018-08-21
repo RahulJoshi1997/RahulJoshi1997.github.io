@@ -39,25 +39,17 @@
             A game about a simple task of moving food around, while keeping in mind several different mechanics at once. It's a hectic split-attention game like Diner Dash.
         </p>
         <p>
-            This was an individual project, first prototyped using Lua in Pico-8 then remade using C# in Unity.
+            This was an individual project so I did all the art and programming myself. I first prototyped this game using Lua in Pico-8 then remade it using C# in Unity.
         </p>
         <h3>Gameplay:</h3>
         <p>
-            The player is the papa who needs to feed their kids five things each. The kids love food though, and they'll keep eating more than what they need. So the player needs keep food away from overeating kids.
-        </p>
-        <p>
-            The player, as the papa, also wants to eat one of every dish at the picnic. So they need to make sure that no one dish is running too low before they get their share.
-        </p>
-        <p>
-            To complicate things, there are also birds trying to poop on the food, so the players may need to keep food in front of overeating kids to weather the storm.
+            The player is the papa who needs to feed their kids five things each. The kids though won't stop eating, even after having their share. Meanwhile, the papa wants to eat one of every dish at the picnic. The player wins when everyone is fed, but they'll have to look out for bird poop to make that happen.
         </p>
         <h3>Design Details:</h3>
         <ul>
-            <li>I wanted to create a dynamic where players want to focus on an immediate action, but have to keep zooming out to reassess the larger situation, leading to a hectic gameplay.</li>
-            <li>I made the feeding criteria for the kids and the papa different but interrelated to make sure players are always thinking about at least two things when moving each dish.</li>
-            <li>I also made each kid potentially trigger a losing condition by overeating, so players always feel an urgent need to scan the dishes and think about the two different feeding criteria.</li>
-            <li>I added the birds to force players to quickly change plans and potentially move dishes to suboptimal positions to avoid the poop. So players will want to think about their reaction to the poop, but they will be rushed by the need to scan all the dishes.</li>
-            <li>Working with Pico-8's limitations, I decided to incorporate keyboard controls into the design. This led to the food stacks where players can only access the dishes at the top of the stack, while kids eat away at the difficult-to-reach bottom. These limitations make it difficult to undo the rushed decisions of the past, pushing players to think more about each immediate action.</li>
+            <li>As a base for a split-attention game, I split the win condition into two parts between the papa and the kids. These conditions are different but interrelated, so players have to keep both in mind at each moment.</li>
+            <li>I also designed the kids overeating habits and the bird poop to punish inattentiveness, which rushes players to make decisions quickly to focus on other areas of the picnic mat.</li>
+            <li>Pico-8 by default supports only keyboard input. I stuck to these limitations and incorporated keyboard controls into the design. I made the mat into a series of food stacks where players can only access the dishes at the top of the stack. This control scheme makes it difficult to undo the rushed decisions of the past, putting more pressure on players to make good decisions.</li>
         </ul>
     </section>
     
@@ -65,13 +57,22 @@
     <section style="clear: both; padding-top: 20px;" class="clearfix">
         <h3 style="padding: 0 0 0 5px">Screenshots:</h3>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
-            <img src="ScreenShot1.png" alt="Screenshot">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="gif1.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
-            <img src="ScreenShot2.png" alt="Screenshot">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="gif2.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
-            <img src="ScreenShot3.png" alt="Screenshot">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="gif3.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
     </section>
     
@@ -79,14 +80,23 @@
     <section id="slideShow">
         <div id="slideContainer">
             <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
-            <img src="ScreenShot1.png" class="slide">
-            <img src="ScreenShot2.png" class="slide">
-            <img src="ScreenShot3.png" class="slide">
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="gif1.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="gif2.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="gif3.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
             <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
             <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
         </div>
     </section>
     <script src="../scripts/slideShow.js"></script>
-    <script>document.getElementsByName("video")[0].volume = 0.3;</script>
+    <script src="../scripts/volumeSet.js"></script>
 </body>
 </html>

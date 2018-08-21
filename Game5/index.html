@@ -47,7 +47,7 @@
         </p>
         <h3>Design and Development Details:</h3>
         <ul>
-            <li>I wrote shaders in HLSL for the sonar effects, using Unity's MaterialBlockProperties to make updating the shader values more efficient.</li>
+            <li>I wrote shaders in HLSL for the sonar effects, using Unity's Material Property Blocks to make updating the shader values more efficient.</li>
             <li>I needed to balance the penalty for pulsing so beginner players had a good experience, but they also felt encouraged to play at a higher level where they pulse less. To solve this, I made speed penaltys for pulsing act more like a speed lock. Players had their speed reduced by 20% and they couldn't accelerate for a while after. This speed lock was short if the player had a lower speed to begin with. This ensured that beginners never felt trapped at a lower speed, but also didn't stay too long at the higher speeds which would encourage them to pulse less.</li>
         </ul>
     </section>
@@ -78,6 +78,6 @@
         </div>
     </section>
     <script src="../scripts/slideShow.js"></script>
-    <script>document.getElementsByName("video")[0].volume = 0.3;</script>
+    <script src="../scripts/volumeSet.js"></script>
 </body>
 </html>
