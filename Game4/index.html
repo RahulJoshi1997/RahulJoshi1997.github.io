@@ -36,11 +36,7 @@
         </div>
         <h3>Description:</h3>
         <p>
-            A puzzle where time moves forwards and backwards when you do. This puzzle was based on a story idea:
-        </p>
-        <article>
-            Someone outside our time and space lives out its lonliness, not precieved by any of us. This ghostly person often steals things people value so that others can feel its existance in some way.
-        </article>
+            A puzzle where time moves forwards and backwards when you do. This puzzle was based on a story idea where someone outside our time and space lives out its lonliness, not precieved by any of us. This ghostly person tries to steal things people value so that others can feel its existance in some way.
         <p>
             This was an individual project made using Lua in Pico-8.
         </p>
@@ -48,55 +44,48 @@
         <p>
             The player is the ghost person, and their goal is to get the hat on the chair before the man picks it up. To achieve this, they need to use the fact that time moves with them only when their feet are touching the ground.
         </p>
+        
+        <h3>Narrative Design Details:</h3>
+        <ul>
+            <li>I used art to highlight the isolation of the player from the world. The player keeps blinking even when time is not moving for everyone else.</li>
+            <li>Prompting the player to go left, I show a semmingly permanent separation between them and the man at the table. I use this moment to make players feel trapped in their isolation.</li>
+            <li>I also literally trap the player with the elevator (seen in the first video below), to make sure that players overcoming their own nature, which causes them lonliness, is a strong element of the arc.</li>
+        </ul>
     </section>
-    <section id="gameSection" class="clearfix" style="padding-top: 20px;">
-        <div id="cover" style="max-width: 384px">
+    
+    <!-- Other Images -->
+    <section style="clear: both; padding-top: 20px;" class="clearfix">
+        <h3 style="padding: 0 0 0 5px">Screenshots and Videos:</h3>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
             <video autoplay loop muted playsinline preload="metadata">
                 <source src="StuckLoop.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
-        
-        <h3>Narrative Design Details:</h3>
-        <ul>
-            <li>I wanted the game to reflect an odd existance out of time along with a deep sense of lonliness. My approach to this was to create separation between the player and the man and make the player feel trapped in that separation.</li>
-            <li>I used visuals to convey separation, where the man is still and lifeless unless the player moves. And I also used man's unchanging series of actions to highlight how the player is separate and impreceptable.</li>
-            <li>Being a ghostly figure that no one is aware of does confer a sense of power. This was an emotion I wanted to undercut with lonliness. So I decided to reflect this dynamic in the mechanics. I gave the player the ability to control time, and tied it to their movement to ultimately trap them.</li>
-            <li>I start the game with the prompt encouraging players to just walk left. This lets player realize that no matter what they do, they will never catch up to the man, much less overtake him. This heightens the separation between the world and the player and also makes them feel trapped. Then I literally trap the player with the elevator. The player can move all they want, but they won't be able to use the elevator as they want.</li>
-            <li>So I turn the game into a story where the players are fighting their own nature. Winning the game doesn't mean tricking unsuspecting victims, it's about gaining a sense of agency in an otherwise poweless existance. The game become more about overcoming separation than about wielding power over someone.</li>
-        </ul>
-    </section>
-    
-    <!--
-    <!-- Other Images
-    <section style="clear: both; padding-top: 20px;" class="clearfix">
-        <h3 style="padding: 0 0 0 5px">Screenshots:</h3>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
-            <video autoplay loop>
-                <source src="StuckLoop.mp4" type="video/mp4">
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="RedHering.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
-            <img src="ScreenShot2.png" alt="Screenshot">
-        </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
-            <img src="ScreenShot3.png" alt="Screenshot">
-        </div>
     </section>
     
-    <!-- Slide Show
+    <!-- Slide Show -->
     <section id="slideShow">
         <div id="slideContainer">
             <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
-            <img src="ScreenShot1.png" class="slide">
-            <img src="ScreenShot2.png" class="slide">
-            <img src="ScreenShot3.png" class="slide">
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="StuckLoop.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="RedHering.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
             <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
             <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
         </div>
     </section>
     <script src="../scripts/slideShow.js"></script>
-    -->
 </body>
 </html>
