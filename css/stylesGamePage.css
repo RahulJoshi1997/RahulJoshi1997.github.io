@@ -63,10 +63,13 @@ h3 {
 #cover {
     margin: auto;
     padding: 10px;
-    width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     float: none;
     clear: both;
+}
+
+#cover img, #cover video {
+    max-width: 100%;
 }
 
 .extras {
@@ -76,6 +79,7 @@ h3 {
     float: left;
 }
 
+/*
 @media only screen and (min-width: 500px) {
     #cover {
         margin: auto;
@@ -84,19 +88,21 @@ h3 {
         clear: both;
     }
 }
+*/
 
 @media only screen and (min-width: 700px) {
     /* ContactMe Switch to right align: */
     #cover {
         margin: 0;
+        max-width: 40%;
         padding: 10px 10px 10px 25px;
         float: right;
         clear: none;
     }
 }
 
+/*
 @media only screen and (min-width: 960px) {
-    /* For desktop: */
     #cover {
         margin: 0;
         padding: 10px 10px 10px 25px;
@@ -104,3 +110,4 @@ h3 {
         clear: none;
     }
 }
+*/

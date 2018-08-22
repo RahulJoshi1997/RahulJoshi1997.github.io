@@ -4,12 +4,28 @@
 	<title>Rahul Joshi</title>
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <link href="../css/stylesGamePage.css" rel="stylesheet" type="text/css">
-    <link href="../css/slideShow.css" rel="stylesheet" type="text/css">
+    <style>
+        #cover {
+            max-width: 100%;
+        }
+        
+        @media only screen and (min-width: 412px) {
+            #cover {
+                max-width: 70%;
+            }
+        }
+        
+        @media only screen and (min-width: 700px) {
+            /* ContactMe Switch to right align: */
+            #cover {
+               max-width: 30%;
+            }
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div>
     <header class="clearfix">
         <!-- Title -->
         <a href="../index.html"><div id="title">
@@ -23,61 +39,19 @@
             <a href="../aboutMe/resume.pdf">Resume</a>
         </p>
     </header>
-    </div>
     
     <!-- My Games/Work -->
     <section id="gameSection" class="clearfix">
         <div id="cover">
-            <video controls preload="metadata">
-                <source src="Intro.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <h3><a href="https://rahuljoshi.itch.io/racing-blind">Play the game on Itch</a></h3>
+            <img src="me.png" alt="It's me!">
         </div>
-        <h3>Description:</h3>
+        <h3>About me:</h3>
         <p>
-            A racing game where players can't see the track, and have to rely on pulses of sonar to make things temporarily visible.
+            I'm a writer, programmer, and designer. I studied Game Design in NYU where I've worked to improve my design and development process, along with my colaborative skills.
         </p>
         <p>
-            This was an individual project, first prototyped using Lua in Pico-8 then remade using C# in Unity.
+            
         </p>
-        <h3>Gameplay:</h3>
-        <p>
-            Players race over the course of two laps. Staying on track makes them go faster, while using sonar pulses slows them down. Both players want to pulse as little as they can, while using the pulses of their opponent to see the track. However, racing without sight risks a very severe penalty for going off track.
-        </p>
-        <h3>Design and Development Details:</h3>
-        <ul>
-            <li>I wrote shaders in HLSL for the sonar effects, using Unity's Material Property Blocks to make updating the shader values more efficient.</li>
-            <li>I needed to balance the penalty for pulsing so beginner players had a good experience, but they also felt encouraged to play at a higher level where they pulse less. To solve this, I made speed penaltys for pulsing act more like a speed lock. Players had their speed reduced by 20% and they couldn't accelerate for a while after. This speed lock was short if the player had a lower speed to begin with. This ensured that beginners never felt trapped at a lower speed, but also didn't stay too long at the higher speeds which would encourage them to pulse less.</li>
-        </ul>
     </section>
-    
-    <!-- Other Images -->
-    <section style="clear: both; padding-top: 20px;" class="clearfix">
-        <h3 style="padding: 0 0 0 5px">Screenshots:</h3>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
-            <img src="ScreenShot1.png" alt="Screenshot">
-        </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
-            <img src="ScreenShot2.png" alt="Screenshot">
-        </div>
-        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
-            <img src="ScreenShot3.png" alt="Screenshot">
-        </div>
-    </section>
-    
-    <!-- Slide Show -->
-    <section id="slideShow">
-        <div id="slideContainer">
-            <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
-            <img src="ScreenShot1.png" class="slide">
-            <img src="ScreenShot2.png" class="slide">
-            <img src="ScreenShot3.png" class="slide">
-            <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
-            <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
-        </div>
-    </section>
-    <script src="../scripts/slideShow.js"></script>
-    <script src="../scripts/volumeSet.js"></script>
 </body>
 </html>

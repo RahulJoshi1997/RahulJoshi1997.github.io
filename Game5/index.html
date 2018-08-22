@@ -47,14 +47,18 @@
         </p>
         <h3>Design and Development Details:</h3>
         <ul>
-            <li>I wrote shaders in HLSL for the sonar effects, using Unity's Material Property Blocks to make updating the shader values more efficient.</li>
-            <li>I needed to balance the penalty for pulsing so beginner players had a good experience, but they also felt encouraged to play at a higher level where they pulse less. To solve this, I made speed penaltys for pulsing act more like a speed lock. Players had their speed reduced by 20% and they couldn't accelerate for a while after. This speed lock was short if the player had a lower speed to begin with. This ensured that beginners never felt trapped at a lower speed, but also didn't stay too long at the higher speeds which would encourage them to pulse less.</li>
+            <li>I wrote shaders in HLSL for the sonar effects.</li>
+            <li>I balanced the penalty for pulsing to accomodate both skilled and beginner players:
+            <ul style="list-style: disc">
+                <li>Players slow down by 20% when they pulse, and they can't accelerate past that speed for a while. So players will accelerate as long as they don't pulse while their top speed is locked.</li>
+                <li>This lock on the maximum speed is short for low speeds and long for high speeds. So it's easy to achieve a decent fun speed, but it's much more difficult to go faster, which makes the game fun for both beginner and expert players.</li>
+            </ul>
         </ul>
     </section>
     
     <!-- Other Images -->
     <section style="clear: both; padding-top: 20px;" class="clearfix">
-        <h3 style="padding: 0 0 0 5px">Screenshots:</h3>
+        <h3 style="padding: 0 0 0 5px">Screenshots and Videos:</h3>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
             <img src="ScreenShot1.png" alt="Screenshot">
         </div>
