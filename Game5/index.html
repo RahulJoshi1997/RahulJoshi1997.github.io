@@ -47,13 +47,22 @@
     <section style="clear: both; padding-top: 20px;" class="clearfix">
         <h3 style="padding: 0 0 0 5px">Screenshots and Videos:</h3>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
-            <img src="ScreenShot1.png" alt="Screenshot">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="g1.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
-            <img src="ScreenShot2.png" alt="Screenshot">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="g2Overtake.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
-            <img src="ScreenShot3.png" alt="Screenshot">
+            <video autoplay loop muted playsinline preload="metadata">
+                <source src="g3RacingSegment.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
     </section>
     
@@ -61,9 +70,18 @@
     <section id="slideShow">
         <div id="slideContainer">
             <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
-            <img src="ScreenShot1.png" class="slide">
-            <img src="ScreenShot2.png" class="slide">
-            <img src="ScreenShot3.png" class="slide">
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="g1.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="g2Overtake.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <video autoplay loop muted playsinline preload="metadata" class="slide">
+                <source src="g3RacingSegment.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
             <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
             <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
         </div>
