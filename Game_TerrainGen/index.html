@@ -19,24 +19,21 @@
                 <source src="Intro.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <h3><a href="https://rahuljoshi.itch.io/picnic-papa">Play the game on Itch</a></h3>
+            <h3><a href="https://rahuljoshi.itch.io/a-terrain-generator">Play the game on Itch</a></h3>
         </div>
         <h3>Description:</h3>
         <p>
-            A game about a simple task of moving food around, while keeping in mind several different mechanics at once. It's a hectic split-attention game like Diner Dash.
+            This is a solo project where I used simplex noise to generate terrain. The generator can create four types of land features: mountains, planes, hills, and canyons.
         </p>
         <p>
-            This was an individual project so I did all the art and programming myself. I first prototyped this game using Lua in Pico-8 then remade it using C# in Unity.
+            This was made using C# in Unity.
         </p>
-        <h3>Gameplay:</h3>
-        <p>
-            The player is the papa who needs to feed their kids five things each. The kids though won't stop eating, even after having their share. Meanwhile, the papa wants to eat one of every dish at the picnic. The player wins when everyone is fed, but they'll have to look out for bird poop to make that happen.
-        </p>
-        <h3>Design Details:</h3>
+        <h3>Some (Semi-)Technical Details:</h3>
         <ul>
-            <li>As a base for a split-attention game, I split the win condition into two parts between the papa and the kids. These conditions are different but interrelated, so players have to keep both in mind at each moment.</li>
-            <li>I also designed the kids overeating habits and the bird poop to punish inattentiveness, which rushes players to make decisions quickly to focus on other areas of the picnic mat.</li>
-            <li>Pico-8 officially only supports keyboard input, so I incorporated these limitations into the design. Payers move a cursor across five stacks, only able to access what's at the top. This control scheme makes it difficult to unpack stacks and undo the rushed decisions of the past, putting more pressure on players to make good decisions.</li>
+            <li>To avoid lag, I split the terrain into smaller chunks and generated these chunks in separate frames.</li>
+            <li>I used object pooling for the terrain chunks to minimize heap allocations.</li>
+            <li>I shared objects (arrays Unity needs to assign meshes new vertices, normals, etc.) between all the terrain chunks to minimize the amount of RAM used in general. </li>
+            <li>I also made a simple state machine for fun. It controls the behavior of the flowers.</li>
         </ul>
     </section>
     
@@ -44,22 +41,28 @@
     <section style="clear: both; padding-top: 20px;" class="clearfix">
         <h3 style="padding: 0 0 0 5px">Screenshots and Videos:</h3>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
-            <video autoplay loop muted playsinline preload="metadata">
-                <source src="gif1.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <img src="ScreenShot1.png" alt="Screenshot">
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
             <video autoplay loop muted playsinline preload="metadata">
-                <source src="gif2.mp4#t=0.1" type="video/mp4">
+                <source src="vid1.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
+            <img src="ScreenShot4.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(4);">
+            <img src="ScreenShot5.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(5);">
             <video autoplay loop muted playsinline preload="metadata">
-                <source src="gif3.mp4#t=0.1" type="video/mp4">
+                <source src="vid2.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(6);">
+            <img src="ScreenShot6.png" alt="Screenshot">
         </div>
     </section>
     
@@ -67,23 +70,22 @@
     <section id="slideShow">
         <div id="slideContainer">
             <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
+            <img src="ScreenShot1.png" class="slide">
             <video autoplay loop muted playsinline preload="metadata" class="slide">
-                <source src="gif1.mp4#t=0.1" type="video/mp4">
+                <source src="vid1.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
+            <img src="ScreenShot4.png" class="slide">
+            <img src="ScreenShot5.png" class="slide">
             <video autoplay loop muted playsinline preload="metadata" class="slide">
-                <source src="gif2.mp4#t=0.1" type="video/mp4">
+                <source src="vid2.mp4#t=0.1" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <video autoplay loop muted playsinline preload="metadata" class="slide">
-                <source src="gif3.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <img src="ScreenShot6.png" class="slide">
             <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
             <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
         </div>
     </section>
     <script src="../scripts/slideShow.js"></script>
-    <script src="../scripts/volumeSet.js"></script>
 </body>
 </html>

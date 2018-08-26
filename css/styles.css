@@ -1,7 +1,7 @@
 /*
 Color Scheme:
 #ACACCC
-#535399 | lighter shades: #8787b8, #eeeef5, #f5f5fa | darker shades: #252545
+#535399 | lighter shades: #8787b8, #e5e5f0, #f5f5fa | darker shades: #252545
 #F0F8FF aliceblue
 #FFD6B0
 #CCB6AC
@@ -118,7 +118,7 @@ header {
 #gameSection img {
     opacity: 1.0;
     filter: alpha(opacity=100);
-    outline: 5px solid #eeeef5;
+    outline: 5px solid #e5e5f0;
 }
 
 div.game {
