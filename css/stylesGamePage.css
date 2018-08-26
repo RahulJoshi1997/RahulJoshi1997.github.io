@@ -56,6 +56,11 @@ h3 {
     max-width: 100%;
 }
 
+#cover h3 {
+    font-size: 2em;
+    padding-top: 10px;
+}
+
 .extras {
     margin: 0px;
     padding: 10px;
