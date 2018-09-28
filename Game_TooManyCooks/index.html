@@ -17,10 +17,7 @@
     <!-- My Games/Work -->
     <section id="gameSection" class="clearfix">
         <div id="cover" style="max-width: 384px">
-            <video autoplay loop muted playsinline preload="metadata">
-                <source src="Intro.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <img src="Intro.png">
         </div>
         <h3>Description:</h3>
         <p>
@@ -49,18 +46,21 @@
     
     <!-- Other Images -->
     <section style="clear: both; padding-top: 20px;" class="clearfix">
-        <h3 style="padding: 0 0 0 5px">Screenshots and Videos:</h3>
+        <h3 style="padding: 0 0 0 5px">Images:</h3>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
-            <video autoplay loop muted playsinline preload="metadata">
-                <source src="StuckLoop.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <img src="Img1.png" alt="Image">
         </div>
         <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
-            <video autoplay loop muted playsinline preload="metadata">
-                <source src="RedHering.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <img src="Img2.png" alt="Image">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(3);">
+            <img src="Img3.png" alt="Image">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(4);">
+            <img src="Img4.png" alt="Image">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(5);">
+            <img src="Img5.png" alt="Image">
         </div>
     </section>
     
@@ -68,14 +68,11 @@
     <section id="slideShow">
         <div id="slideContainer">
             <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
-            <video autoplay loop muted playsinline preload="metadata" class="slide">
-                <source src="StuckLoop.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <video autoplay loop muted playsinline preload="metadata" class="slide">
-                <source src="RedHering.mp4#t=0.1" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+            <img src="Img1.png" class="slide">
+            <img src="Img2.png" class="slide">
+            <img src="Img3.png" class="slide">
+            <img src="Img4.png" class="slide">
+            <img src="Img5.png" class="slide">
             <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
             <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
         </div>
