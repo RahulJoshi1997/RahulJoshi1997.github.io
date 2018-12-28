@@ -8,7 +8,7 @@ function printHeader (pathPrefix) {
         </div></a>\
         <!-- Contact Me -->\
         <p id="contactMe">\
-            <a href="mailto:rj1093@nyu.edu">rj1093@nyu.edu</a><br />\
+            <a href="mailto:rahul.j@nyu.edu">rahul.j@nyu.edu</a><br />\
             <a href="' + pathPrefix + 'aboutMe/index.html">About Me</a><br />\
             <a href="' + pathPrefix + 'aboutMe/RahulJoshi_Resume.pdf">Resume</a>\
         </p>\
