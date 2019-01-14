@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>A Terrain Generator by Rahul Joshi</title>
+    <meta name="description" content="A Twine game about myself">
+    <meta name="keywords" content="game designer, portfolio, Twine, narrative design, narrative structure, stories, writing">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/stylesGamePage.css" rel="stylesheet" type="text/css">
+    <link href="../css/slideShow.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script src="../scripts/headerContent.js"></script>
+    <script>printHeader("../");</script>
+    
+    <!-- My Games/Work -->
+    <section id="gameSection" class="clearfix">
+        <div id="cover">
+            <video controls preload="metadata">
+                <source src="Intro.mp4#t=0.1" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <h3><a href="https://rahuljoshi.itch.io/pothole-river?secret=j3RHwfMrcccGPijkxNaURopA6E">Play on Itch.io</a></h3>
+        </div>
+        <h3>Description:</h3>
+        <p>
+            A twine game about myself written over the course of three weeks.
+        </p>
+        <p>
+            The game takes the player through my memories to show how I view life: as something disorientating and dream-like, where events happen meaninglessly and yet have real emotional consequence, leaving me to wonder what they all mean to me.
+        </p>
+        <h3>Gameplay:</h3>
+        <p>
+            It's a traditional hypertext game where players click on words to make choices and continue the story. Often these choices make the story jump from one memory to another.
+        </p>
+        <p>
+            The game ends with a sequence that assigns one of four possible meanings to my life.
+        </p>
+        <h3>Design Details:</h3>
+        <ul>
+            <li>I used the second person to place the player in my perspective and create a parallel between the player finding meaning in the story to me finding meaning in life.</li>
+            <li>I wrote the links' anchor text say little about where they will lead, so that the player feels lost and the events of the story feel somewhat arbitrary and meaningless.</li>
+            <li>I wrote the memories to be evocative and share a common sense of loss to give them emotional significance. This encourages the player to read the story as a collage with an overarching meaning and purpose.</li>
+            <li>I end the game with the player arriving on a meaning to my life and then waking up from their dream. Finding meaning creates closure by making sense of the entire story. But I relegate this finality to a dream and highlight a continuing real world where events will change how I understand my life.</li>
+        </ul>
+    </section>
+    
+    <!-- Other Images -->
+    <section id="screenshots" class="clearfix">
+        <h3>Screenshots and Videos:</h3>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(1);">
+            <img src="ScreenShot1.png" alt="Screenshot">
+        </div>
+        <div class="extras col-a-12 col-b-6 col-c-4 slideElement" onclick="openSlideShow(2);">
+            <img src="ScreenShot2.png" alt="Screenshot">
+        </div>
+    </section>
+    
+    <!-- Slide Show -->
+    <section id="slideShow">
+        <div id="slideContainer">
+            <a class="closeSlides" onclick="closeSlideShow();">&times;</a>
+            <img src="ScreenShot1.png" class="slide">
+            <img src="ScreenShot2.png" class="slide">
+            
+            <a class="prevSlide" onclick="incrementSlide(-1)">&#10094;</a>
+            <a class="nextSlide" onclick="incrementSlide(1)">&#10095;</a>
+        </div>
+    </section>
+    <script src="../scripts/slideShow.js"></script>
+</body>
+</html>
