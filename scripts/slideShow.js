@@ -1,8 +1,8 @@
 var currentSlide;
 
-function openSlideShow(slideNum) {
+function openSlideShow(slideNumber) {
     document.getElementById("slideShow").style.display = "block";
-    setCurrent(slideNum);
+    setCurrentSlide(slideNumber);
 }
 
 function closeSlideShow() {
@@ -10,20 +10,19 @@ function closeSlideShow() {
 }
 
 function incrementSlide(amount) {
-    setCurrent(currentSlide + amount);
+    setCurrentSlide(currentSlide + amount);
 }
 
-function setCurrent(slideNum) {
+function setCurrentSlide(newSlide) {
     var slides = document.getElementsByClassName("slide");
-    for (var i = 0; i < slides.length; ++i) {
+    var numSlides = slides.length;
+    
+    for (var i = 0; i < numSlides; ++i) {
         slides[i].style.display = "none";
     }
     
-    currentSlide = slideNum;
-    if (currentSlide < 1) {
-        currentSlide = slides.length;
-    } else if (currentSlide > slides.length) {
-        currentSlide = 1;
-    }
-    slides[currentSlide - 1].style.display = "block";
+    newSlide -= 1;
+    currentSlide = ((newSlide % numSlides) + numSlides) % numSlides;
+    slides[currentSlide].style.display = "block";
+    currentSlide += 1;
 }
